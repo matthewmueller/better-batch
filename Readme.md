@@ -40,7 +40,7 @@ Batch()
 
 - Generator and synchronous function support
 - Support for passing arguments through `batch.end([args, ...], fn)`
-- Composable and support for passing arrays into Batch([batch1, batch2]) or `batch.push([fn1, fn2])`
+- Composable and support for passing arrays into `Batch([batch1, batch2])` or `batch.push([fn1, fn2])`
 - Does not have "progress" events. I've never needed them, but feel free to open a PR if you need them :-)
 
 ## API
