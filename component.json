@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "matthewmueller/wrap-fn": "0.0.1"
+    "matthewmueller/wrap-fn": "0.0.1",
+    "matthewmueller/enqueue": "0.0.4"
   },
   "development": {},
   "license": "MIT",

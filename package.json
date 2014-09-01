@@ -9,8 +9,7 @@
     "url": "git://github.com/MatthewMueller/better-batch.git"
   },
   "dependencies": {
-    "enqueue": "0.0.3",
-    "once": "^1.3.0",
+    "enqueue": "0.0.4",
     "wrap-fn": "0.0.2"
   },
   "devDependencies": {
