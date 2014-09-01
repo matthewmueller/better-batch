@@ -4,7 +4,6 @@
 
 var enqueue = require('enqueue');
 var wrap = require('wrap-fn');
-var once = require('once');
 var noop = function(){};
 var slice = [].slice;
 
@@ -96,6 +95,7 @@ Batch.prototype.end = function() {
   var len = this.length;
   var throws = this.e;
   var fns = this.fns;
+  var called = false;
   var pending = len;
   var results = [];
   var errors = [];
@@ -133,6 +133,15 @@ Batch.prototype.end = function() {
 
   // call the fns in parallel
   for (var i = 0, fn; fn = fns[i]; i++) call(fn, i);
+
+  // call the function exactly once
+  function once(fn) {
+    return function() {
+      if (called) return;
+      called = true;
+      return fn.apply(this, arguments);
+    }
+  }
 
   return this;
 };
