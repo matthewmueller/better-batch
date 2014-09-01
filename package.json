@@ -1,6 +1,6 @@
 {
   "name": "better-batch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "visionmedia/batch, but with support for sync and generator functions, along with arguments",
   "keywords": [],
   "author": "Matthew Mueller <mattmuelle@gmail.com>",
