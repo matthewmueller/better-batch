@@ -45,25 +45,25 @@ Batch()
 
 ## API
 
-### `Batch([fn|generator|array|batch])`
+#### `Batch([fn|generator|array|batch])`
 
 Initialize a `batch`. Optionally supports passing a function, generator, array or another batch instance.
 
-### `Batch.push([fn|array|batch|generator])`
+#### `Batch.push([fn|array|batch|generator])`
 
 Add a job to `batch`. Optionally supports passing a function, generator, array or another batch instance.
 
 If you don't specify a callback function, the function will be considered synchronous.
 
-### `Batch.end([args, ...], fn)`
+#### `Batch.end([args, ...], fn)`
 
 Run the `batch`. Optionally pass some `args` into `fn`. When batch finishes `fn` will be called with the errors or results.
 
-### `Batch.concurrency(n)`
+#### `Batch.concurrency(n)`
 
 Set the parallelism of `batch` to `n`. Defaults to `Infinity`.
 
-### `Batch.throws(throws)`
+#### `Batch.throws(throws)`
 
 Tells `batch` how to handle errors, either call `end` immediately or buffer errors and return when done. Defaults to `true` which would call `end` immediately in the event of an error.
 
