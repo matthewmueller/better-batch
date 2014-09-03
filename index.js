@@ -64,6 +64,8 @@ Batch.prototype.throws = function(throws) {
  */
 
 Batch.prototype.push = function (fn) {
+  if (!fn) return this;
+
   if (fn instanceof Batch) {
     return this.use(fn.fns);
   }

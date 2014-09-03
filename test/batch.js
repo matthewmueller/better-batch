@@ -14,6 +14,11 @@ describe('Batch', function(){
       it('should invoke the callback', function(done){
         batch.end(done);
       })
+
+      it('should work with undefined', function(done) {
+        batch.push(undefined);
+        batch.end(done);
+      })
     })
 
     it('construct an array of results in order', function(done){
@@ -118,7 +123,7 @@ describe('Batch', function(){
         var called = 0;
 
         batch.push(function *() {
-          yield wait(100)
+          yield wait(200)
           called++;
           throw new Error('explosion');
         })
