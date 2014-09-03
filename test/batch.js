@@ -9,7 +9,17 @@ describe('Batch', function(){
     batch = new Batch;
   })
 
+  describe('#push()', function() {
+    it('should support an array', function(done) {
+      function a() {}
+      function b() {}
+      batch.push([a, b])
+      batch.end(done);
+    })
+  })
+
   describe('#end(callback)', function(){
+
     describe('when no functions are queued', function(){
       it('should invoke the callback', function(done){
         batch.end(done);

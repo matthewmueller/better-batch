@@ -67,11 +67,11 @@ Batch.prototype.push = function (fn) {
   if (!fn) return this;
 
   if (fn instanceof Batch) {
-    return this.use(fn.fns);
+    return this.push(fn.fns);
   }
 
   if (fn instanceof Array) {
-    for (var i = 0, f; f = fn[i++];) this.use(f);
+    for (var i = 0, f; f = fn[i++];) this.push(f);
     return this;
   }
 
